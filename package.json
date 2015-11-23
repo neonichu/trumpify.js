@@ -1,0 +1,11 @@
+{
+  "name": "trumpify",
+  "version": "0.1.0",
+  "description": "Trump up your tweets",
+  "license": "MIT",
+  "repository": "https://github.com/neonichu/trumpify.js",
+
+  "dependencies": {
+    "html2png": "~1.1.0"
+  }
+}
