@@ -11,7 +11,7 @@ if (args.length == 0) {
   process.exit();
 }
 
-fs.readFile('tweet.html', 'utf8', function(err, data) {
+fs.readFile(__dirname + '/tweet.html', 'utf8', function(err, data) {
   if (err) throw err;
 
   data = data.replace(/YOLO/g, args.join(' '));
@@ -20,7 +20,7 @@ fs.readFile('tweet.html', 'utf8', function(err, data) {
   screenshot.render(data, function (err, data) {
     if (err) throw err;
 
-    fs.writeFile("tweet.png", data, function(err) {
+    fs.writeFile(process.cwd() + "/tweet.png", data, function(err) {
       if (err) throw err;
 
       screenshot.close();
